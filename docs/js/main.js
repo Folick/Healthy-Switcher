@@ -1,4 +1,11 @@
 $(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 40) {
+      $('#scrollTop').fadeIn();
+    } else {
+      $('#scrollTop').fadeOut();
+    }
+  });
   $(".hamburger").on("click", function (e) {
     $(this).toggleClass("is-active"),
       e.preventDefault(),
@@ -34,13 +41,6 @@ $(function () {
   });
   $("img, a").on("dragstart", function (event) {
     event.preventDefault();
-  });
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 50) {
-      $('#scrollTop').fadeIn();
-    } else {
-      $('#scrollTop').fadeOut();
-    }
   });
   $("#scrollTop").click(function () {
     $('html ,body').animate({
