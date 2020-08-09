@@ -16,6 +16,21 @@ $(function () {
     arrows: true,
     infinite: true,
     slidesToShow: 2,
+    responsive: [{
+        breakpoint: 870,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          autoplay: 900,
+          arrows: false,
+        }
+      },
+    ],
   });
   $("img, a").on("dragstart", function (event) {
     event.preventDefault();
